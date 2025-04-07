@@ -19,11 +19,16 @@ let clickCount = 0; // 记录点击 No 的次数
 
 // No 按钮的文字变化
 const noTexts = [
-  "？你认真的吗…",
+  "妈咪你认真的吗…",
   "要不再想想？",
   "不许选这个！ ",
-  "我会很伤心…",
-  "不行:(",
+  "我们会很伤心的…",
+  "不要:(",
+  "再考虑考虑嘛QAQ",
+  "我们不是你最爱的小莱小鱼了嘛TAT",
+  "妈咪…",
+  "不要丢下我们",
+  "最爱你了！",
 ];
 
 // No 按钮点击事件
@@ -44,7 +49,7 @@ noButton.addEventListener("click", function () {
   questionText.style.transform = `translateY(-${moveUp}px)`;
 
   // No 文案变化（前 5 次变化）
-  if (clickCount <= 5) {
+  if (clickCount <= 10) {
     noButton.innerText = noTexts[clickCount - 1];
   }
 
@@ -57,7 +62,7 @@ noButton.addEventListener("click", function () {
 });
 
 // Yes 按钮点击后，进入表白成功页面
-const loveTest = `!!!喜欢你!! ( >᎑<)♡︎ᐝ  ${
+const loveTest = `!!!爱你妈咪!!! ( >᎑<)♡︎ᐝ  ${
   username ? `${safeUsername}  ♡︎ᐝ(>᎑< )` : ""
 }`;
 
